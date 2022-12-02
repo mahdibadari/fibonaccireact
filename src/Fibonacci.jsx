@@ -9,10 +9,6 @@ export default function Fibonacci() {
 
   const handleChange = (event) => {
     var index = event.target.value;
-    if (index < -1) {
-      setIsError(true);
-      return;
-    }
     if (index > 93) return;
     setValue( event.target.value);
   }
@@ -47,7 +43,6 @@ export default function Fibonacci() {
         <input type="submit" value="Submit" />
       </form>
       <span hidden={isHidden}>Sequences biggest number is {biggestNumber}</span>
-      <span hidden={!isError}>Input index must be higher than 0</span>
       <div className='sequences'>
         <ul>
             <span>{sequences.toString()}</span>
